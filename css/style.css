@@ -1,5 +1,55 @@
 @import url('./fonts.css');
 
+@keyframes moveCar {
+  0% {
+    left: -100%;
+  }
+  80% {
+    transform: translateX(-43%) rotate(0);
+  }
+  90% {
+    transform: translateX(-43%) rotate(1deg);
+    left: 48%;
+  }
+  100% {
+    transform: translateX(-43%) rotate(0);
+  }
+}
+@keyframes rotateFrontWheel {
+  0% {
+    transform: rotate(0);
+  }
+  80% {
+    top: 105px;
+  }
+  90% {
+    top: 101px;
+  }
+  100% {
+    top: 105px;
+    transform: rotate(720deg);
+  }
+}
+@keyframes rotateRearWheel {
+  0% {
+    transform: rotate(0);
+  }
+  90% {
+    transform: rotate(720deg);
+  }
+  100% {
+    transform: rotate(720deg);
+  }
+}
+@keyframes changeCarColor {
+  from {          
+    filter: hue-rotate(0deg);
+  }
+  to {
+    filter: hue-rotate(360deg);
+  }
+}
+
 * {
   box-sizing: border-box;
 }
@@ -116,56 +166,6 @@ body {
 }
 
 /* MOVED CAR */
-@keyframes moveCar {
-  0% {
-    left: -800px;
-  }
-  80% {
-    transform: translateX(-43%) rotate(0);
-  }
-  90% {
-    transform: translateX(-43%) rotate(1deg);
-    left: 48%;
-  }
-  100% {
-    transform: translateX(-43%) rotate(0);
-  }
-}
-@keyframes rotateFrontWheel {
-  0% {
-    transform: rotate(0);
-  }
-  80% {
-    top: 105px;
-  }
-  90% {
-    top: 101px;
-    transform: rotate(720deg);
-  }
-  100% {
-    top: 105px;
-    transform: rotate(720deg);
-  }
-}
-@keyframes rotateRearWheel {
-  0% {
-    transform: rotate(0);
-  }
-  90% {
-    transform: rotate(720deg);
-  }
-  100% {
-    transform: rotate(720deg);
-  }
-}
-@keyframes changeCarColor {
-  from {          
-    filter: hue-rotate(0deg);
-  }
-  to {
-    filter: hue-rotate(360deg);
-  }
-}
 .live-car {
   padding: 50px 0 20px;
 }
@@ -177,7 +177,7 @@ body {
   transition: all .3s ease-in-out;
   animation: moveCar 3s, 4s changeCarColor 6s infinite;
   left: 48%;
-  transform: translateX(-43%) rotate(0);
+  transform: translateX(-43%) rotate(0);  
 }
 .car::before {
   content: '';
@@ -189,6 +189,7 @@ body {
   left: 94px;
   animation: rotateRearWheel 3s;
   transition: all .3s ease-in-out;
+  background-size: contain;
 }
 .car::after {
   content: '';
@@ -200,6 +201,7 @@ body {
   right: 107px;
   animation: rotateFrontWheel 3s;
   transition: all .3s ease-in-out;
+  background-size: contain;
 }   
 
 @media screen and (max-width: 1279px) {
@@ -225,6 +227,40 @@ body {
   }
 }
 @media screen and (max-width: 1023px) {
+  .car {
+    width: 500px;
+    height: 158px;
+    background: url(../img/car_body.png) no-repeat, url(../img/car-shadow.png) center 131px no-repeat;
+    background-size: contain;
+  }
+  .car::before {
+    width: 85px;    
+    height: 86px;
+    top: 66px;
+    left: 63px;
+  }
+  .car::after {
+    width: 83px;
+    height: 83px;
+    top: 69px;
+    right: 68px;
+  }
+  @keyframes rotateFrontWheel {
+    0% {
+      transform: rotate(0);
+    }
+    80% {
+      top: 69px;
+    }
+    90% {
+      top: 67px;
+    }
+    100% {
+      top: 69px;
+      transform: rotate(720deg);
+    }
+  }
+
   .cars__list {
     grid-template-columns: 1fr 1fr;
   }
@@ -234,6 +270,43 @@ body {
   }
 }
 @media screen and (max-width: 679px) {
+  .live-car {
+    padding-bottom: 0;
+  }
+  .car {
+    width: 230px;
+    height: 73px;
+    background: url(../img/car_body.png) no-repeat, url(../img/car-shadow.png) center 57px no-repeat;
+    background-size: contain;
+  }
+  .car::before {
+    width: 40px;
+    height: 41px;
+    top: 30px;
+    left: 28px;
+  }
+  .car::after {
+    width: 39px;
+    height: 39px;
+    top: 31px;
+    right: 31px;
+  }
+  @keyframes rotateFrontWheel {
+    0% {
+      transform: rotate(0);
+    }
+    80% {
+      top: 31px;
+    }
+    90% {
+      top: 29px;
+    }
+    100% {
+      top: 31px;
+      transform: rotate(720deg);
+    }
+  }
+
   .cars__list {
     grid-template-columns: 1fr;
   }
