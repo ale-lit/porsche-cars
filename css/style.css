@@ -56,12 +56,13 @@ body {
   font-size: 4.5rem;
   padding: 0;
   line-height: 0;
-  margin-left: 2rem;
+  margin: 75px 0 50px 40px;
 }
 .cars__item-price {
   color: #fff;
-  margin-left: 2rem;
+  margin: 0 0 0 40px;
   font-size: 1.5rem;
+  padding: 0;
 }
 .cars__item-config-button {
   position: absolute;
