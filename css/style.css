@@ -8,6 +8,16 @@ body {
   padding: 0 1rem;
   margin: 0;
 }
+.header {
+  border-bottom: 1px solid #ebebeb;
+}
+.header__logo {
+  background: #fff url('./img/porsche-logo.svg') no-repeat;
+  width: 93px;
+  height: 56px;
+  background-size: cover;
+  margin: 0 auto -12px;
+}
 .cars__title {
   font-family: 'PorscheNext-Thin';
   text-align: center;
