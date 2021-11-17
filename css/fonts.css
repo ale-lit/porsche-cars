@@ -1,0 +1,45 @@
+@font-face {
+  font-family: 'PorscheNext-Thin';
+  src: url('../fonts/PorscheNextWCy-Thin.woff2') format('woff2'),
+     url('../fonts/PorscheNextWCy-Thin.woff') format('woff'),
+     url('../fonts/PorscheNextWCy-Thin.ttf') format('truetype'),
+     url('../fonts/PorscheNextWCy-Thin.svg') format('svg');
+  font-style: normal;
+  font-weight: 100;
+}
+@font-face {
+  font-family: 'PorscheNext-ThinItalic';
+  src: url('../fonts/PorscheNextWCy-ThinItalic.woff2') format('woff2'),
+     url('../fonts/PorscheNextWCy-ThinItalic.woff') format('woff'),
+     url('../fonts/PorscheNextWCy-ThinItalic.ttf') format('truetype'),
+     url('../fonts/PorscheNextWCy-ThinItalic.svg') format('svg');
+  font-style: italic;
+  font-weight: 100;
+}
+@font-face {
+  font-family: 'PorscheNext';
+  src: url('../fonts/PorscheNextWCy-Regular.woff2') format('woff2'),
+     url('../fonts/PorscheNextWCy-Regular.woff') format('woff'),
+     url('../fonts/PorscheNextWCy-Regular.ttf') format('truetype'),
+     url('../fonts/PorscheNextWCy-Regular.svg') format('svg');
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'PorscheNext-Italic';
+  src: url('../fonts/PorscheNextWCy-Italic.woff2') format('woff2'),
+     url('../fonts/PorscheNextWCy-Italic.woff') format('woff'),
+     url('../fonts/PorscheNextWCy-Italic.ttf') format('truetype'),
+     url('../fonts/PorscheNextWCy-Italic.svg') format('svg');
+  font-style: italic;
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'PorscheNext-Bold';
+  src: url('../fonts/PorscheNextWCy-Bold.woff2') format('woff2'),
+     url('../fonts/PorscheNextWCy-Bold.woff') format('woff'),
+     url('../fonts/PorscheNextWCy-Bold.ttf') format('truetype'),
+     url('../fonts/PorscheNextWCy-Bold.svg') format('svg');
+  font-style: normal;
+  font-weight: 700;
+}
