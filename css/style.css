@@ -18,6 +18,8 @@ body {
   background-size: cover;
   margin: 0 auto -12px;
 }
+
+/* CARS GRID */
 .cars__title {
   font-family: 'PorscheNext-Thin';
   text-align: center;
@@ -112,6 +114,93 @@ body {
   transform: translateY(-5px);
   color: #d5001c;
 }
+
+/* MOVED CAR */
+@keyframes moveCar {
+  0% {
+    left: -800px;
+  }
+  80% {
+    transform: translateX(-43%) rotate(0);
+  }
+  90% {
+    transform: translateX(-43%) rotate(1deg);
+    left: 48%;
+  }
+  100% {
+    transform: translateX(-43%) rotate(0);
+  }
+}
+@keyframes rotateFrontWheel {
+  0% {
+    transform: rotate(0);
+  }
+  80% {
+    top: 105px;
+  }
+  90% {
+    top: 101px;
+    transform: rotate(720deg);
+  }
+  100% {
+    top: 105px;
+    transform: rotate(720deg);
+  }
+}
+@keyframes rotateRearWheel {
+  0% {
+    transform: rotate(0);
+  }
+  90% {
+    transform: rotate(720deg);
+  }
+  100% {
+    transform: rotate(720deg);
+  }
+}
+@keyframes changeCarColor {
+  from {          
+    filter: hue-rotate(0deg);
+  }
+  to {
+    filter: hue-rotate(360deg);
+  }
+}
+.live-car {
+  padding: 50px 0 20px;
+}
+.car {
+  width: 745px;
+  height: 235px;
+  background: url('../img/car_body.png') no-repeat, url('../img/car-shadow.png') center 187px no-repeat;
+  position: relative;
+  transition: all .3s ease-in-out;
+  animation: moveCar 3s, 4s changeCarColor 6s infinite;
+  left: 48%;
+  transform: translateX(-43%) rotate(0);
+}
+.car::before {
+  content: '';
+  width: 123px;
+  height: 125px;
+  background: url('../img/wr.png') no-repeat;
+  position: absolute;
+  top: 99px;
+  left: 94px;
+  animation: rotateRearWheel 3s;
+  transition: all .3s ease-in-out;
+}
+.car::after {
+  content: '';
+  width: 120px;
+  height: 120px;
+  background: url('../img/wf.png') no-repeat;
+  position: absolute;
+  top: 105px;
+  right: 107px;
+  animation: rotateFrontWheel 3s;
+  transition: all .3s ease-in-out;
+}   
 
 @media screen and (max-width: 1279px) {
   .cars__item-title {

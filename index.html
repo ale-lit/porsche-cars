@@ -12,47 +12,6 @@
     <div class="header__logo"></div>
   </header>
   <main>
-    <style>
-      @keyframes color {
-        from {          
-          filter: hue-rotate(0deg);
-        }
-        to {
-          filter: hue-rotate(360deg);
-        }
-      }
-      .live-car {
-        padding: 25px 0;
-      }
-      .car {
-        width: 741px;
-        height: 204px;
-        background: url('./img/car_body.png') no-repeat;
-        position: relative;
-        transition: all .3s ease-in-out;
-      }
-      .car::before {
-        content: '';
-        width: 123px;
-        height: 125px;
-        background: url('./img/wr.png') no-repeat;
-        position: absolute;
-        bottom: -20px;
-        left: 94px;
-      }
-      .car::after {
-        content: '';
-        width: 120px;
-        height: 120px;
-        background: url('./img/wf.png') no-repeat;
-        position: absolute;
-        bottom: -21px;
-        right: 103px;
-      }   
-      .car:hover {
-        animation: color 5s infinite;
-      }   
-    </style>
     <section class="live-car">
       <div class="car"></div>
     </section>
