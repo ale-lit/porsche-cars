@@ -12,7 +12,7 @@ body {
   border-bottom: 1px solid #ebebeb;
 }
 .header__logo {
-  background: #fff url('./img/porsche-logo.svg') no-repeat;
+  background: #fff url('../img/porsche-logo.svg') no-repeat;
   width: 93px;
   height: 56px;
   background-size: cover;
