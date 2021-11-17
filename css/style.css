@@ -29,26 +29,19 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
+  transition: all .3s ease-in-out;
+  overflow: hidden;
 }
 .cars__item:nth-child(1) {
-  background-image: url('../img/small-taycan.jpg');
   grid-row: 1 / 3;
   grid-column: 1 / 3;
 }
-.cars__item:nth-child(2) {
-  background-image: url('../img/small-718.jpg');
+.cars__item-image {
+  width: 100%;
+  transition: all .3s ease-in-out;
 }
-.cars__item:nth-child(3) {
-  background-image: url('../img/small-911.jpg');
-}
-.cars__item:nth-child(4) {
-  background-image: url('../img/small-panamera.jpg');
-}
-.cars__item:nth-child(5) {
-  background-image: url('../img/small-macan.jpg');
-}
-.cars__item:nth-child(6) {
-  background-image: url('../img/small-cayenne.jpg');
+.cars__item:hover .cars__item-image {
+  transform: scale(1.02);
 }
 .cars__item-title {
   color: #fff;
@@ -56,13 +49,21 @@ body {
   font-size: 4.5rem;
   padding: 0;
   line-height: 0;
-  margin: 75px 0 50px 40px;
+  margin: 0;
+  position: absolute;
+  z-index: 1;
+  top: 75px;
+  left: 40px;
 }
 .cars__item-price {
   color: #fff;
-  margin: 0 0 0 40px;
-  font-size: 1.5rem;
+  margin: 0;
+  font-size: 1.6rem;
   padding: 0;
+  position: absolute;
+  z-index: 1;
+  top: 130px;
+  left: 40px;
 }
 .cars__item-config-button {
   position: absolute;
@@ -75,6 +76,7 @@ body {
   font-family: 'PorscheNext', Arial, sans-serif;
   font-size: 20px;
   transition: all .3s ease-in-out;
+  z-index: 1;
 }
 .cars__item-config-button:hover {
   background-color: #d5001c;
@@ -93,6 +95,7 @@ body {
   font-family: 'PorscheNext', Arial, sans-serif;
   font-size: 20px;
   transition: all .3s ease-in-out;
+  z-index: 1;
 }
 .cars__item-review-button:hover {
   border-color: #d5001c;
